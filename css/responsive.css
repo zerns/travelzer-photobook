@@ -302,11 +302,26 @@
 
   .timeline__content {
     grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
+    gap: 6rem;
   }
 
   .timeline-item {
     padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .timeline-item:first-child::after,
+  .timeline-item--active::after {
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item:first-child::after{
+    bottom: -73px;
+  }
+
+  .timeline-item--active::after {
+    bottom: -99px;
   }
 
   /* Footer */

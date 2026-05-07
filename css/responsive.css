@@ -1,0 +1,413 @@
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   ======================================== */
+
+/* ========================================
+   TABLET (768px and up)
+   ======================================== */
+
+@media (min-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    padding: var(--spacing-2xl) var(--spacing-2xl);
+    min-height: auto;
+    gap: var(--spacing-2xl);
+  }
+
+  .hero__content {
+    text-align: left;
+    margin: 0;
+  }
+
+  .hero__logo {
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .hero__title {
+    font-size: 3rem;
+  }
+
+  .hero__cta {
+    justify-content: flex-start;
+  }
+
+  .hero__image-wrapper {
+    height: 500px;
+  }
+
+  /* Book Details */
+  .book-details__container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .specs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+  }
+
+  /* Timeline */
+  .timeline__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .timeline-item {
+    padding: var(--spacing-lg);
+  }
+}
+
+/* ========================================
+   SMALL LAPTOP (1024px and up)
+   ======================================== */
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.0625rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.75rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-3xl);
+    align-items: center;
+    min-height: 90vh;
+  }
+
+  .hero__title {
+    font-size: 3.5rem;
+  }
+
+  .hero__image-wrapper {
+    height: 600px;
+  }
+
+  /* Book Details */
+  .book-details {
+    padding: var(--spacing-3xl) var(--spacing-2xl);
+  }
+
+  .book-details__container {
+    gap: var(--spacing-3xl);
+  }
+
+  .specs-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  /* Timeline */
+  .timeline {
+    padding: var(--spacing-3xl) var(--spacing-2xl);
+  }
+
+  .timeline__content {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-2xl);
+  }
+}
+
+/* ========================================
+   DESKTOP (1280px and up)
+   ======================================== */
+
+@media (min-width: 1280px) {
+  .hero {
+    gap: var(--spacing-lg);
+    padding: var(--spacing-3xl) var(--spacing-3xl);
+  }
+
+  .hero__image-wrapper {
+    height: 700px;
+  }
+
+  .book-details__container {
+    max-width: 1400px;
+    gap: var(--spacing-3xl);
+  }
+
+  .specs-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Button Hover Effects */
+  .button {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .button:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* ========================================
+   LARGE DESKTOP (1920px and up)
+   ======================================== */
+
+@media (min-width: 1920px) {
+  .hero {
+    padding: var(--spacing-3xl) 10%;
+  }
+
+  .book-details {
+    padding: var(--spacing-3xl) 10%;
+  }
+
+  .book-details__container {
+    max-width: 1600px;
+  }
+
+  .timeline {
+    padding: var(--spacing-3xl) 10%;
+  }
+
+  .footer {
+    padding: var(--spacing-2xl) 10%;
+  }
+}
+
+/* ========================================
+   SMALL SCREENS (Below 768px)
+   ======================================== */
+
+@media (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: var(--font-size-lg);
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: var(--spacing-2xl) var(--spacing-md);
+    gap: var(--spacing-2xl);
+    min-height: 100vh;
+  }
+
+  .hero__content {
+    text-align: center;
+    order: 1;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  .hero__cta {
+    justify-content: center;
+    gap: var(--spacing-sm);
+  }
+
+  .button {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-sm);
+  }
+
+  .button--large {
+    width: 100%;
+  }
+
+  .hero__image-wrapper {
+    order: 2;
+    height: 300px;
+  }
+
+  /* Book Details */
+  .book-details {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .book-details__container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .book-details__specs {
+    order: 1;
+  }
+
+  .book-details__description {
+    order: 2;
+  }
+
+  .specs-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .spec-card {
+    aspect-ratio: 1 / 1;
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .highlight-item {
+    padding-left: var(--spacing-md);
+  }
+
+  .book-details__text {
+    font-size: var(--font-size-base);
+  }
+
+  /* Timeline */
+  .timeline {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .timeline__content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .timeline-item {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  /* Footer */
+  .footer {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .footer__text {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* ========================================
+   PORTRAIT ORIENTATION (Tablets)
+   ======================================== */
+
+@media (max-width: 900px) and (orientation: portrait) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero__image-wrapper {
+    height: 350px;
+  }
+}
+
+/* ========================================
+   LANDSCAPE ORIENTATION (Small screens)
+   ======================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: var(--spacing-lg);
+  }
+
+  .hero__image-wrapper {
+    height: 250px;
+  }
+}
+
+/* ========================================
+   HIGH DPI / RETINA SCREENS
+   ======================================== */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Potentially sharper fonts and images */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+  .hero__cta,
+  .footer {
+    display: none;
+  }
+
+  .page {
+    background: white;
+  }
+
+  body {
+    color: black;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========================================
+   DARK MODE (if supported)
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-light: #2a2a2a;
+    --color-white: #1a1a1a;
+    --color-text: #e0e0e0;
+    --color-text-light: #aaaaaa;
+    --color-border: #404040;
+  }
+
+  body {
+    background-color: var(--color-white);
+    color: var(--color-text);
+  }
+}

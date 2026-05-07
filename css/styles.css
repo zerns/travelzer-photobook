@@ -552,6 +552,18 @@ a:hover {
   text-align: center;
 }
 
+.reactions__inner::before {
+  content: '';
+  display: block;
+  width: 89px;
+  height: 89px;
+  background-image: url('../assets/icons-marble.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto var(--spacing-lg);
+}
+
 .reactions__eyebrow {
   display: flex;
   align-items: center;
@@ -657,6 +669,18 @@ a:hover {
   max-width: 720px;
   margin: 0 auto;
   text-align: center;
+}
+
+.about-travelzer__inner::before {
+  content: '';
+  display: block;
+  width: 89px;
+  height: 89px;
+  background-image: url('../assets/icons-lotus_temple.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto var(--spacing-lg);
 }
 
 .about-travelzer__eyebrow {

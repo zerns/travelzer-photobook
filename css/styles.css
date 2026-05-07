@@ -72,7 +72,7 @@ html {
 }
 
 body {
-  font-family: var(--font-family-sans);
+  font-family: var(--font-family-serif);
   font-size: var(--font-size-base);
   line-height: var(--line-height-normal);
   color: var(--color-text);
@@ -456,7 +456,7 @@ a:hover {
 
 .timeline__title {
   text-align: center;
-  margin-bottom: var(--spacing-3xl);
+  margin-bottom: var(--spacing-2xl);
   color: var(--color-primary);
 }
 
@@ -464,8 +464,8 @@ a:hover {
   max-width: 1280px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  gap: var(--spacing-2xl);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 90px;
   position: relative;
 }
 
@@ -505,6 +505,36 @@ a:hover {
 
 .timeline-item--active .timeline-item__event {
   color: var(--color-accent);
+}
+
+/* Timeline Connectors - CSS Sprites
+   Sprite: 621x325px. Tower content: col 59-203. Elephant: col 266-581.
+   At background-size 170x89px: tower=16-55px, elephant=73-159px (no bleed). */
+.timeline-item:first-child::after,
+.timeline-item--active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  height: 89px;
+  background-image: url('../assets/icons-separator.png');
+  background-size: 170px 89px;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.timeline-item:first-child::after {
+  left: calc(90% + 10px);
+  width: 73px;
+  background-position: 0 0;
+}
+
+.timeline-item--active::after {
+  left: calc(100% + 15px);
+  width: 95px;
+  background-position: -68px 0;
+  pointer-events: none;
 }
 
 /* ========================================
